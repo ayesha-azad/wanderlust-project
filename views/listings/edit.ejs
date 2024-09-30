@@ -1,0 +1,83 @@
+<% layout("/layouts/boilerplate") %>
+
+    <h2 class="text-center"> Edit Listing </h2>
+    <form action="/listings/<%= listing._id %>?_method=PUT" method="post" novalidate 
+        class="needs-validation" enctype="multipart/form-data">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <div class="form-group mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" id="title" class="form-control" name="listing[title]" value="<%= listing.title%>" required>
+                    <div class="valid-feedback">
+                        Title Looks good!
+                      </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea type="text" id="description" class="form-control" name="listing[description]" required> <%= listing.description%> </textarea>
+                    <div class="invalid-feedback">
+                        Please enter a short description.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <h6>Original Listing Image</h6>
+                    <img src="<%= originalImageURL %>" alt="Original Image" style="width: 300px;height: 250px;">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="image" class="form-label">Image Link</label>
+                    <input type="file" id="image" class="form-control" name="listing[image]">
+                </div>
+
+                <div class="row">
+                    <div class="form-group mb-3 col-md-4">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="text" id="price" class="form-control" name="listing[price]" value="<%= listing.price%>" required>
+                        <div class="invalid-feedback">
+                            Price should be valid.
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3 col-md-8">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" id="location" class="form-control" name="listing[location]" value="<%= listing.location%>" required>
+                        <div class="invalid-feedback">
+                            Location should be valid.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group mb-3 col-md-8">
+                    <label for="location" class="form-label">Country</label>
+                    <input type="text" id="location" class="form-control" name="listing[country]" value="<%= listing.country%>" required>
+                    <div class="invalid-feedback">
+                        Country should be valid.
+                    </div>
+                </div>
+
+                <label for="category" class="form-label">Category</label>
+                <select id="category" name="listing[category]" class="form-select mb-3" aria-label="Default select example">
+                    <option selected><%= listing.category%></option>
+                    <option value="top-cities">Top Cities</option>
+                    <option value="amazing-views">Amazing Views</option>
+                    <option value="tropical">Tropical</option>
+                    <option value="beach">Beach</option>
+                    <option value="camping">Camping</option>
+                    <option value="mansions">Mansions</option>
+                    <option value="forests">Forests</option>
+                    <option value="countryside">Countryside</option>
+                    <option value="snowy-areas">Snowy Areas</option>
+                    <option value="mountains">Mountains</option>
+                </select>
+        
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-dark btn-edit offset-6 mb-3">Edit</button>
+    </form>
+
+    

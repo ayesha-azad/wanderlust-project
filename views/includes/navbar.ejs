@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center ms-4" href="/listings">
+      <i class="fa-regular fa-compass"></i>
+      <span class="ms-4">Explore</span>
+    </a>
+
+    <!-- Toggler for mobile view -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        
+
+        <form class="d-flex ms-auto search-form" method="post" action="/listings/category">
+        <!-- <select id="category" name="search" class="form-select" aria-label="Default select example">
+            <option selected>Search by Country or City</option>
+            <option value="country">Country</option>
+            <option value="location">Location</option>
+        </select> -->
+          <input class="form-control me-2 ms-2" type="search" id="search" name="search" 
+          placeholder="Search by country" aria-label="Search">
+          <button class="btn btn-outline-danger btn-search ms-2" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </ul>
+
+      <!-- Right-aligned nav items (signup, login, logout) -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/listings/new">Airbnb your home</a>
+        </li>
+
+        <% if(!currUser){ %>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup"><b>Signup</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login"><b>Login</b></a>
+          </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout"><b>Logout</b></a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>

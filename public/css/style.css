@@ -1,0 +1,224 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+/* Navbar */
+
+.navbar{
+    height: 5rem;
+    background-color: #ffffff !important;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem
+}
+
+.nav-link{
+    color: #222222 !important;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    background-color: #ebebeb;
+    height: 10rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0; 
+}
+
+.f-info-links, .f-info-socials, .f-info-brand{
+    width: 100%;
+    text-align: center;
+    vertical-align: center;
+}
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+
+.f-info-links a{
+    color : #222222;
+    text-decoration: none;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+/* Cards */
+.listing-card{
+    border: none;
+    margin-bottom: 2rem;
+    color: #222222;
+}
+
+.card-img-top{
+    border-radius: 1rem;
+    object-fit: cover;
+    height: 20rem;
+    width: 100%;
+}
+
+.card-body{
+    padding: 0;
+}
+
+.listing-link{
+    text-decoration: none;
+}
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* New Page */
+.btn-add{
+    background-color: #fe424d;
+    border: none;
+}
+
+/* Edit Page */
+.btn-edit{
+    background-color: #fe424d;
+    border: none;
+}
+
+/* Map  */
+#map { 
+    height: 400px;
+    width: 80vh; 
+}
+
+/* Customised Marker  */
+.marker {
+    background-image: url('https://res.cloudinary.com/dgrwibaio/image/upload/v1727674038/pink-background-white-line-airbnb-260nw-2203503727_jqmy48.webp');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Filters  */
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+    height: 75px;
+}
+
+.anchor-filter{
+    text-decoration: none;
+    color: black
+}
+
+.filter{
+    text-align: center;
+    margin-left: 2rem;
+    opacity: 0.7;
+    margin-bottom: 0.7rem;
+    cursor: pointer;
+    height: 50px;
+}
+
+.anchor-filter:hover{
+    color: black
+}
+
+.filter:hover{
+    opacity: 1;
+    border-bottom: 3px solid rgb(230, 226, 226);
+}
+
+.filter p {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.toggle-btn{
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    height: 55px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self:flex-start;
+    margin-left: 2rem;
+}
+
+.form-check-reverse {
+    text-align: center;
+}
+
+.form-check-input{
+    height: 1.5rem !important;
+    width: 2.5rem !important;
+    margin-bottom: 0.3rem !important;
+    margin-left: 0.3rem !important;
+}
+
+.form-check-input:checked {
+    background-color: black; /* Change background color when checked */
+    border-color: black; /* Change border color when checked */
+}
+
+.form-check-label{
+    width: 180px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding-top: 0.4rem !important;
+}
+
+.form-check-input:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 0.0001rem rgba(4, 0, 0, 0.5); /* Custom shadow color */
+}
+
+.toggle-tax{
+    display: none;
+    font-size: 0.8rem;
+}
+
+/* Search  */
+.search-form .form-control{
+    padding: 0 3rem 0 1rem;
+    border-radius: 3rem;
+}
+
+.btn-search{
+    background-color: #fe424d !important;
+    color: white !important;
+    border-radius: 3rem;
+    width: 60px;
+}
+
+@media (min-width: 1100px) {
+    .collapse.dont-collapse-lg {
+      display: block;
+      height: auto !important;
+      visibility: visible;
+    }
+}
+
+@media (max-width: 1100px) {
+    .filter-div{
+        height: 180px;
+    }
+}
