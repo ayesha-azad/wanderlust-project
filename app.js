@@ -131,3 +131,5 @@ app.use((err, req, res, next) => {
     // res.status(statusCode).send(message);
     res.status(statusCode).render("listings/error.ejs", {message});
 })
+
+module.exports = app; // Required for Vercel
